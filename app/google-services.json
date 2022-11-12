@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "358426814720",
+    "project_id": "air2203",
+    "storage_bucket": "air2203.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358426814720:android:97ce09afc3cdbb4743abe5",
+        "android_client_info": {
+          "package_name": "hr.foi.air2203"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358426814720-flo45pueecfa4nm198grt0u1dcqm4pi8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByfaSyBVDZtaINzcxg6PqCs76Rj3yc48w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358426814720-flo45pueecfa4nm198grt0u1dcqm4pi8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
