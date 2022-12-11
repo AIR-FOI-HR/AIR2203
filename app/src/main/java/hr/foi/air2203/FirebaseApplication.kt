@@ -5,6 +5,7 @@ import hr.foi.air2203.repository.FirebaseSource
 import hr.foi.air2203.repository.UserRepository
 import hr.foi.air2203.ui.auth.AuthViewModelFactory
 import hr.foi.air2203.ui.home.HomeViewModelFactory
+import hr.foi.air2203.ui.profile.ProfileViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -22,6 +23,7 @@ class FirebaseApplication : Application(), KodeinAware {
         bind() from singleton { UserRepository(instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { HomeViewModelFactory(instance()) }
+        bind() from provider { ProfileViewModelFactory(instance()) }
 
     }
 }

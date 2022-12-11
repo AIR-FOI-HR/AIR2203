@@ -10,6 +10,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import hr.foi.air2203.R
 import hr.foi.air2203.databinding.ActivityMainpageBinding
+import hr.foi.air2203.utils.startProfilePageActivity
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
@@ -31,7 +32,7 @@ class MainPageActivity : AppCompatActivity(), KodeinAware {
         binding.viewmodel = viewModel
 
     }
-
+    
 }
 
 

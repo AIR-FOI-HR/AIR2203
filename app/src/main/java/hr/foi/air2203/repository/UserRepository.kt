@@ -13,7 +13,9 @@ class UserRepository (
 
     fun logout() = firebase.logout()
 
-    fun updateprofile(profileupdates: UserProfileChangeRequest) = firebase.UpdateProfile(profileupdates)
+    fun updateprofile(profileupdates: UserProfileChangeRequest) = firebase.updateProfile(profileupdates)
 
     fun sendverification() = firebase.SendVerificationForNewUser()
+
+    fun updatePassword(password: String) = firebase.updatePassword(password)
 }

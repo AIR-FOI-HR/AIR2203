@@ -37,7 +37,27 @@ class FirebaseSource {
 
     fun currentUser() = firebaseAuth.currentUser
 
-    fun UpdateProfile(profileupdates: UserProfileChangeRequest) = currentUser()?.updateProfile(profileupdates)
+    fun updateProfile(profileupdates: UserProfileChangeRequest) =  Completable.create { emitter ->
+        currentUser()!!.updateProfile(profileupdates).addOnCompleteListener {
+            if (!emitter.isDisposed) {
+                if (it.isSuccessful)
+                    emitter.onComplete()
+                else
+                    emitter.onError((it.exception!!))
+            }
+        }
+    }
+
+    fun updatePassword(password : String) = Completable.create { emitter ->
+        currentUser()!!.updatePassword(password).addOnCompleteListener(){
+            if (!emitter.isDisposed) {
+                if (it.isSuccessful)
+                    emitter.onComplete()
+                else
+                    emitter.onError((it.exception!!))
+            }
+        }
+    }
 
     fun SendVerificationForNewUser() = currentUser()?.sendEmailVerification()
 

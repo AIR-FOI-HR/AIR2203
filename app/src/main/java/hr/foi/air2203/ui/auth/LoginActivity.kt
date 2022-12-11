@@ -38,6 +38,7 @@ class LoginActivity : AppCompatActivity(), AuthListener, KodeinAware {
         startHomeActivity()
     }
 
+
     override fun onFailure(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }

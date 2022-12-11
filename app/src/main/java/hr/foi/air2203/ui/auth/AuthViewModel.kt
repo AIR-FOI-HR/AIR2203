@@ -91,11 +91,6 @@ class AuthViewModel(
         }
     }
 
-    fun goToLogin(view: View) {
-        Intent(view.context, LoginActivity::class.java).also {
-            view.context.startActivity(it)
-        }
-    }
 
 
     override fun onCleared() {
